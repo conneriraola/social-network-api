@@ -10,12 +10,12 @@ const reactionSchema = new Schema(
         },
         reactionBody: {
             type: String,
-            required: "Please provide reaction text",
+            required: true,
             maxlength: 280,
         },
         username: {
             type: String,
-            Required: "Please provide a username",
+            Required: true,
         },
         createdAt: {
             type: Date,
