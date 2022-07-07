@@ -45,10 +45,11 @@ const userController = {
         });
     },
     getSingleUser(req, res) {
-        User.findOne({ _id: params.id })
+        console.log(req.params.userId)
+        User.findOne({ _id: req.params.userId })
+        .select("-__v")
         .populate('friends')
         .populate('thoughts')
-        .select("-__v")
         .then((dbUserData) => {
             if (!dbUserData) {
                 return res.status(404).json({ message: 'No user found with specified id' });
@@ -61,8 +62,9 @@ const userController = {
         });
     },
     updateUser(req, res) {
+        console.log(req)
         User.findOneAndUpdate(
-            { _id: params.id },
+            { _id: req.params.userId },
             {
                 $set: req.body,
             },

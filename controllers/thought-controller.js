@@ -6,7 +6,7 @@ const thoughtController = {
         Thought.create(req.body)
           .then((dbThoughtData) => {
             return User.findOneAndUpdate(
-              
+
               { _id: req.body.userId },
               { $push: { thoughts: dbThoughtData._id } },
               { new: true }
@@ -99,7 +99,7 @@ const thoughtController = {
           })
           .then((dbUserData) => {
             if (!dbUserData) {
-              return res.status(404).json({ message: 'Thought created but no user with this id!' });
+              return res.status(404).json({ message: 'Thought successfully deleted' });
             }
             res.json({ message: 'Thought successfully deleted!' });
           })
