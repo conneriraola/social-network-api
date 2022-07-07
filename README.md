@@ -27,4 +27,6 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ```
 
 ## Link
-Walkthrough video: 
+Walkthrough videos:
+https://drive.google.com/file/d/1rXLucDxCNcoG72CaWo71OYedHIaxjikW/view?usp=sharing
+https://drive.google.com/file/d/18YtkH6ORHZdGJpg00qDddS6ErlUadbXL/view?usp=sharing
